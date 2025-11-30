@@ -1,7 +1,15 @@
+import Header from "./Header";
+import Search from "./Search";
+import BookList from "./Booklist";
 
+ 
 function Boimela (){
    return(
-      <div>Boimela</div>
+      <div>
+         <Header/>
+         <Search/>
+         <BookList/>
+      </div>
    )
 }
 
