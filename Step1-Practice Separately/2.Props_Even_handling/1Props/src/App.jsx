@@ -1,6 +1,4 @@
 import Card from "./components/Card"
-import Card from './../../2Cards/src/components/Card';
-
 
 const App = () => {
 
@@ -109,11 +107,12 @@ const App = () => {
   ];
 
   return (
-    <div className="w-full h-screen flex gap-2 m-3">
+    <div className="w-full min-h-[100%]
+     flex gap-2 m-3">
       {
         jobOpenings.map(function(elm,idx){
           return <div>
-            <Card/>
+            <Card brandLogo={elm.brandLogo}/>
           </div>
         })
       }

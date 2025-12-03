@@ -1,6 +1,7 @@
 import { Bookmark } from "lucide-react";
 
-const Card = () => {
+const Card = (props) => {
+
   return (
     <div className="h-[350px] w-[250px] bg-white border border-gray-200 rounded-2xl p-4 flex flex-col justify-between shadow-sm hover:shadow-lg transition-shadow duration-300">
 
@@ -8,7 +9,7 @@ const Card = () => {
       <div className="flex justify-between items-center mb-2">
         <img
           className="w-10 h-10 rounded-full border object-cover"
-          src="https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png"
+          src={props.brandLogo}
           alt="Company Logo"
         />
 
