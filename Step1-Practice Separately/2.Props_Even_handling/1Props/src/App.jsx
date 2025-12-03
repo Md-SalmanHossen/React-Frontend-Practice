@@ -1,9 +1,8 @@
-import Card from "./components/Card"
+import Card from "./components/Card";
 
 const App = () => {
 
-
-    const jobOpenings = [
+  const jobOpenings = [
     {
       brandLogo: "https://pngimg.com/uploads/meta/meta_PNG12.png",
       companyName: "Meta",
@@ -107,17 +106,24 @@ const App = () => {
   ];
 
   return (
-    <div className="w-full min-h-[100%]
-     flex gap-2 m-3">
-      {
-        jobOpenings.map(function(elm,idx){
-          return <div key={idx}>
-            <Card company={elm.companyName} datePosted={elm.datePosted} post={elm.post} brandLogo={elm.brandLogo} tag1={elm.tag1} tag2={elm.tag2} pay={elm.pay} location={elm.location}/>
-          </div>
-        })
-      }
+    <div className="min-h-screen w-full bg-gray-50 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {jobOpenings.map((elm, idx) => (
+          <Card
+            key={idx}
+            company={elm.companyName}
+            datePosted={elm.datePosted}
+            post={elm.post}
+            brandLogo={elm.brandLogo}
+            tag1={elm.tag1}
+            tag2={elm.tag2}
+            pay={elm.pay}
+            location={elm.location}
+          />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
