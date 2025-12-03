@@ -111,7 +111,7 @@ const App = () => {
      flex gap-2 m-3">
       {
         jobOpenings.map(function(elm,idx){
-          return <div>
+          return <div key={idx}>
             <Card company={elm.companyName} datePosted={elm.datePosted} post={elm.post} brandLogo={elm.brandLogo} tag1={elm.tag1} tag2={elm.tag2} pay={elm.pay} location={elm.location}/>
           </div>
         })
