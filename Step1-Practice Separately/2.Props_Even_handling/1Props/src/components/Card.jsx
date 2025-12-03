@@ -26,15 +26,15 @@ const Card = (props) => {
         </h3>
 
         <h2 className="text-lg font-semibold mb-2 leading-tight">
-          Senior UI/UX Designer
+          {props.post}
         </h2>
 
         <div className="flex flex-wrap gap-2 text-xs">
           <span className="bg-gray-100 px-2 py-1 rounded-full text-gray-700">
-            Part-Time
+            {props.tag1}
           </span>
           <span className="bg-gray-100 px-2 py-1 rounded-full text-gray-700">
-            Senior Level
+            {props.tag2}
           </span>
         </div>
       </div>
@@ -44,8 +44,8 @@ const Card = (props) => {
       {/* Bottom Section */}
       <div className="flex justify-between items-end pt-2 border-t border-gray-100">
         <div>
-          <h3 className="text-sm font-bold">$200-250k</h3>
-          <p className="text-xs text-[10px] text-gray-500">Dhaka, Bangladesh</p>
+          <h3 className="text-sm font-bold">{props.pay}</h3>
+          <p className="text-xs text-[10px] text-gray-500">{props.location}</p>
         </div>
 
         <button className="bg-black text-white px-2 py-1 rounded-lg font-medium text-sm hover:bg-blue-700 cursor-pointer transition-colors">
