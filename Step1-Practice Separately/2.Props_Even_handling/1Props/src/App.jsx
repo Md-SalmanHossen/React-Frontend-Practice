@@ -1,4 +1,5 @@
 import Card from "./components/Card"
+import Card from './../../2Cards/src/components/Card';
 
 
 const App = () => {
@@ -109,9 +110,13 @@ const App = () => {
 
   return (
     <div className="w-full h-screen flex gap-2 m-3">
-      <Card/>
-      <Card/>
-      <Card/>
+      {
+        jobOpenings.map(function(elm,idx){
+          return <div>
+            <Card/>
+          </div>
+        })
+      }
     </div>
   )
 }
