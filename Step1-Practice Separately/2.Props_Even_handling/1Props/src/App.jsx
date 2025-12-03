@@ -112,7 +112,7 @@ const App = () => {
       {
         jobOpenings.map(function(elm,idx){
           return <div>
-            <Card brandLogo={elm.brandLogo}/>
+            <Card company={elm.companyName} datePosted={elm.datePosted} brandLogo={elm.brandLogo}/>
           </div>
         })
       }

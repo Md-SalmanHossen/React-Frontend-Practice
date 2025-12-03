@@ -22,7 +22,7 @@ const Card = (props) => {
       {/* Middle Section */}
       <div className="flex-grow my-2">
         <h3 className="text-xs text-gray-500 uppercase tracking-wide">
-          Amazon • <span className="text-[10px] text-gray-400">5 days ago</span>
+          {props.company} • <span className="text-[10px] text-gray-400">{props.datePosted}</span>
         </h3>
 
         <h2 className="text-lg font-semibold mb-2 leading-tight">
