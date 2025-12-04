@@ -23,7 +23,7 @@ const App = () => {
   ]
   return (
     <div className=''>
-      <Section1/>
+      <Section1 users={users}/>
       <Section2/>
     </div>
   )
