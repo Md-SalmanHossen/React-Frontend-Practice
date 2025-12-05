@@ -27,7 +27,6 @@ const App = () => {
   return (
     <div className="min-h-screen text-black p-10">
 
-      {/* -------- FORM -------- */}
       <div className="bg-white rounded-xl">
         <form
           onSubmit={submitHandler}
@@ -56,7 +55,6 @@ const App = () => {
         </form>
       </div>
 
-      {/* -------- RECENT NOTES -------- */}
       <h1 className="text-3xl font-bold my-6">Recent Notes</h1>
 
       <div className="flex gap-5 flex-wrap max-h-[500px] overflow-auto">
@@ -71,7 +69,6 @@ const App = () => {
                   "url('https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png')",
               }}
             >
-              {/* ❌ Delete Button */}
               <button
                 onClick={() => deleteNote(idx)}
                 className="absolute cursor-pointer top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded"
