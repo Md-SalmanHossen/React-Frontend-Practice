@@ -1,9 +1,24 @@
+
+import { useState } from "react";
+
 const App = () => {
+    const [title, setTitle] = useState("");
+    const [details, setDetails] = useState("");
+
+    const [task, setTask] = useState([])
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log('Form submitted');
+
+    const copyTask=[...task];
+    copyTask.push({title,details});
+    setTask(copyTask);
+    
+
+    setTitle("");
+    setDetails("");
   };
+
 
   return (
     <div className=" bg-gray-100 text-black">
@@ -20,11 +35,19 @@ const App = () => {
               type="text"
               placeholder="Enter Notes Heading"
               className="px-5 py-3 font-medium w-full outline-none border-2 rounded-lg"
+              value={title}
+              onChange={(e)=>{
+                setTitle(e.target.value)
+              }}
             />
 
             <textarea
               placeholder="Enter details"
               className="px-5 py-3 font-medium h-32 outline-none border-2 w-full rounded-lg resize-none"
+              value={details}
+              onChange={(e)=>{
+                setDetails(e.target.value)
+              }}
             />
 
             <button 
@@ -45,14 +68,15 @@ const App = () => {
         <div className="mt-12">
           <h1 className="text-3xl font-bold mb-5">Recent Notes</h1>
 
-          <div className="flex gap-5 flex-wrap">
-            <div className="h-52 w-40 rounded-2xl bg-black text-white p-4 shadow-md">
-              Note 1
-            </div>
-
-            <div className="h-52 w-40 rounded-2xl bg-black text-white p-4 shadow-md">
-              Note 2
-            </div>
+          <div className="flex gap-5 flex-wrap overflow-auto">
+            {
+              task.map(function(elm,idx){
+                return <div key={idx} className="h-52 w-40 rounded-2xl bg-black text-white">
+                  <h3 className="p-4 leading-tight text-xl font">{elm.title}</h3>
+                  <p className="px-4 font-medium text-gray-200 py-2 ">{elm.details}</p>
+                </div>
+              })
+            }
           </div>
         </div>
 
