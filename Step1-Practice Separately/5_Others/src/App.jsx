@@ -12,7 +12,16 @@ const App = () => {
   
   //remove 
   localStorage.removeItem('age');
-  
+
+
+  const obj={
+    "name":"Salman",
+    "age":18,
+    "city":"rangpur"
+  }
+
+  localStorage.setItem("obj",JSON.stringify(obj));
+
   return (
     <div>
       <h1 className='text-center font-bold text-4xl p-4'>Practice Local storage</h1>
