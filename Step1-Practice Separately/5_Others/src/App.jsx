@@ -22,6 +22,9 @@ const App = () => {
 
   localStorage.setItem("obj",JSON.stringify(obj));
 
+  //clear all
+  localStorage.clear();
+
   return (
     <div>
       <h1 className='text-center font-bold text-4xl p-4'>Practice Local storage</h1>
