@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 
 const App = () => {
    const [Increment, setIncrement] = useState(0);
+   const [Increment, setIncrement] = useState(0);
 
    const IncrementValue=()=>{
       setIncrement(prevValue => prevValue + 1);
