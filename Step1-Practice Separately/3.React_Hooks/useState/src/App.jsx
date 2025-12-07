@@ -6,6 +6,9 @@ const App = () => {
    const IncrementValue=()=>{
       setIncrement(prevValue => prevValue + 1);
    }
+   const decrementValue=()=>{
+      setIncrement(prevValue => prevValue - 1);
+   }
   return (
     <div className='text-center'>
       <h1 className='text-center text-3xl font-bold p-10 my-5'>Practice useState</h1>
