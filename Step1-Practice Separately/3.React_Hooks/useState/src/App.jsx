@@ -2,13 +2,13 @@ import React,{useState} from 'react'
 
 const App = () => {
    const [Increment, setIncrement] = useState(0);
-   const [Increment, setIncrement] = useState(0);
+   const [decrement, setIncrementFunc] = useState(0);
 
    const IncrementValue=()=>{
       setIncrement(prevValue => prevValue + 1);
    }
    const decrementValue=()=>{
-      setIncrement(prevValue => prevValue - 1);
+      setIncrementFunc(prevValue => prevValue - 1);
    }
   return (
     <div className='text-center m-10'>
@@ -17,7 +17,7 @@ const App = () => {
       <button className='font-bolder text-center bg-green-500 cursor-pointer px-5 py-2 rounded-xl' onClick={IncrementValue}>Increment</button>
       <button className='font-bolder text-center bg-red-500 cursor-pointer px-5 py-2 rounded-xl' onClick={decrementValue}>Increment</button>
       <h1 className='text-center text-center'>{Increment}</h1>
-      <h1 className='text-center text-center'>{Increment}</h1>
+      <h1 className='text-center text-center'>{decrement}</h1>
     </div>
   )
 }
