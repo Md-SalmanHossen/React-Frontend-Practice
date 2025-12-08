@@ -10,7 +10,7 @@ const Books = ({data}) => {
     <div>
       <h1 className='text-center text-4xl  font-bold my-10'>Books</h1>
       <Suspense fallback={<span>Loading....</span>}>
-        <div className='grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-4'>
+        <div className='grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-3'>
          {
          data.map((singleBook)=><Book key={singleBook.bookId} singleBook={singleBook}/>)
         }
