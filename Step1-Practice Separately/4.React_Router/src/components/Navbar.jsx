@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div>
-      
-      <div className="flex justify-between bg-gray-300 rounded-xl text-2xl font-medium p-4">
+      <div className="flex justify-between bg-gray-800 text-white rounded text-2xl font-medium p-4">
         <h3>Salman</h3>
         <div className=" flex justify-center items-center  gap-4 mx-4">
           <Link to='/' className="hover:underline">Home</Link>

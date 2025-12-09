@@ -4,6 +4,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Navbar from "./components/Navbar"
 import Product from "./pages/Product"
+import Footer from "./components/Footer"
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/product" element={<Product/>}/>
       </Routes>
+      <Footer/>
     </div>
   )
 }
