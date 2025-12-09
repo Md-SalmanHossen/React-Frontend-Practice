@@ -8,19 +8,28 @@ import Footer from "./components/Footer"
 import NotFound from "./pages/NotFound"
 import MenCollection from './pages/MenCollection';
 import WomenCollection from "./pages/WomenCollection"
+import Courses from "./pages/Courses"
+import Kid from "./pages/Kid"
+import CourseDetails from "./pages/CourseDetails"
 
 const App = () => {
   return (
     <div  className="p-4">
       <Navbar/>
       <Routes>
+        
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/courses" element={<Courses/>}/>
+        <Route path="/courses/:id" element={<CourseDetails/>}/>
         <Route path="/contact" element={<Contact/>}/>
+
         <Route path="/product" element={<Product/>}>
-        <Route path="men" element={<MenCollection/>}/>
-        <Route path="women" element={<WomenCollection/>}/>
+          <Route path="men" element={<MenCollection/>}/>
+          <Route path="women" element={<WomenCollection/>}/>
+          <Route path="kid" element={<Kid/>}/>
         </Route>
+
         <Route path="/*" element={<NotFound/>}/>
       </Routes>
       <Footer/>
