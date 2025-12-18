@@ -8,7 +8,11 @@ import ContactPage from '../pages/ContactPage'
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout/>}>
+      <Route path="/" element={
+        <div className='bg-gray-800 min-h-screen'>
+          <MainLayout/>
+        </div>
+      }>
         <Route index element={<HomePage/>}/>
         <Route path='about' element={<AboutPage/>}/>
         <Route path='contact' element={<ContactPage/>}/>

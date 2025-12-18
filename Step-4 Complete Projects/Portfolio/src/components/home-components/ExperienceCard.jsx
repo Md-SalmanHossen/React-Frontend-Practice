@@ -4,7 +4,7 @@ const ExperienceCard = ({years,subtitle}) => {
   return (
       <div className='border p-2 rounded-md border-pink-500'>
          <h2 className='text-4xl text-pink-500 font-bold'>{years}</h2>
-         <p className='text-sm'>{subtitle}</p>
+         <p className='text-sm text-white'>{subtitle}</p>
       </div>
   )
 }
