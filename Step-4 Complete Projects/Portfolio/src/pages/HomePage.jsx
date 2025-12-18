@@ -6,15 +6,15 @@ import ImageSection from '../components/home-components/ImageSection'
 
 const HomePage = () => {
   return (
-    <div>
-      <div>
+    <div className='flex gap-4 mt-10 mx-4 w-full'>
+      <div className='w-1/2'>
 
         <HeaderSection/>
         <ExperienceSection/>
         <ExpertiseSection/>
 
       </div>
-      <ImageSection/>
+      <ImageSection />
     </div>
   )
 }
