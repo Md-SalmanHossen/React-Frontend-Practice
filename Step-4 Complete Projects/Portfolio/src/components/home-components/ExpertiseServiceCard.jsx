@@ -1,41 +1,19 @@
 import React from 'react'
+import reactLogo from '../../assets/react_original_logo_icon_146374.png'
+import jsLogo from '../../assets/5352-html5_102567.png'
+import figmaLogo from '../../assets/figma_logo_icon_170157.png'
 
 const ExpertiseCard = () => {
   return (
-    <div>
-      <div className=' border-2 border-dotted flex my-4 justify-center items-center border-white rounded-2xl shadow-lg'>
-        <div className='p-4 text-white w-full'>
+    <div className='flex-1 border-2 border-dotted border-gray-500 rounded-2xl p-6 min-h-[150px] flex flex-col items-center justify-between bg-transparent shadow-lg'>
+      <h4 className='text-white text-2xl font-semibold mb-4'>
+        Services
+      </h4>
 
-          <h4 className='text-center text-xl font-bold mb-6 uppercase text-pink-500'>
-            Services
-          </h4>
-
-          <div className='flex gap-4 justify-center items-center'>
-            <div className=' transition-transform duration-300 hover:scale-110'>
-              <img
-                className='size-14 object-contain filter'
-                src="src/assets/react_original_logo_icon_146374.png"
-                alt="react-icon"
-              />
-            </div>
-
-            <div className=' transition-transform duration-300 hover:scale-110'>
-              <img
-                className='size-14 object-contain filter'
-                src="src/assets/figma_logo_icon_170157.png"
-                alt="figma"
-              />
-            </div>
-
-            <div className=' transition-transform duration-300 hover:scale-110'>
-              <img
-                className='size-14 object-contain'
-                src="src/assets/5352-html5_102567.png"
-                alt="html"
-              />
-            </div>
-          </div>
-        </div>
+      <div className='flex flex-row justify-center items-center flex-1'>
+        <img className='size-10 object-contain' src={reactLogo} alt="react" />
+        <img className='size-10 object-contain' src={jsLogo} alt="js" />
+        <img className='size-10 object-contain' src={figmaLogo} alt="figma" />
       </div>
     </div>
   )

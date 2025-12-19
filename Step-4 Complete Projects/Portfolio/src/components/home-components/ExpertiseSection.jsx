@@ -6,13 +6,10 @@ import img2 from '../../assets/Gemini_Generated_Image_s288o2s288o2s288.png'
 
 const ExpertiseSection = () => {
   return (
-
     <div className='flex gap-4'>
-      
-      <ExpertiseCard/>
-      <ExpertiseProjectsCard title="Projects" img={img1}/>
-      <ExpertiseProjectsCard title="About Us" img={img2}/>
-
+      <ExpertiseCard />
+      <ExpertiseProjectsCard title="Projects" img={img1} />
+      <ExpertiseProjectsCard title="About Us" img={img2} />
     </div>
   )
 }
