@@ -29,6 +29,14 @@ const Navbar = () => {
             Contact
          </NavLink>
       </li>
+      <li>
+         <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "text-pink-500" : "text-white")}
+         >
+            Service
+         </NavLink>
+      </li>
     </>
   );
   return (
