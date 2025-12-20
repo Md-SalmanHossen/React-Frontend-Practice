@@ -31,7 +31,7 @@ const Navbar = () => {
       </li>
       <li>
          <NavLink
-            to="/contact"
+            to="/service"
             className={({ isActive }) => (isActive ? "text-pink-500" : "text-white")}
          >
             Service
